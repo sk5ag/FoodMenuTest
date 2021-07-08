@@ -7,17 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppMaterialModule } from './material/app-material/app-material.module';
 import { SponserComponentComponent } from './sponser/sponser-component/sponser-component.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CategoryComponent } from './categories/category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SponserComponentComponent
+    SponserComponentComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
