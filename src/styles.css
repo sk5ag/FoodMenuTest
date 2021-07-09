@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    background-color: whitesmoke;
 }
 
 body {
@@ -25,4 +26,15 @@ mat-toolbar {
 .column-label {
     margin-right: 8px;
     font-size: 1rem;
+}
+
+.footer-area {
+    background-color: #C0C0C0;
+}
+
+.footer-area h2 {
+    font-size: large;
+    color: rgb(78, 78, 76);
+    text-align: center;
+    padding: 15px;
 }

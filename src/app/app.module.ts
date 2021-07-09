@@ -9,12 +9,16 @@ import { AppMaterialModule } from './material/app-material/app-material.module';
 import { SponserComponentComponent } from './sponser/sponser-component/sponser-component.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './categories/category/category.component';
+import { HeaderComponent } from './headerfooter/header/header.component';
+import { FooterComponent } from './headerfooter/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SponserComponentComponent,
-    CategoryComponent
+    CategoryComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

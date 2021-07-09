@@ -1,0 +1,16 @@
+<div class="footer-area">
+    <h2>THIS IS THE FOOTER AREA . . . </h2>
+    <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="5px grid">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of ['INFORMATION','HELPFUL LINKS','COMPANY','SUBSCRIBE']">
+                <mat-grid-list cols="4" rowHeight="2:1">
+                    <div>
+                        <h2 style="text-align: start; color: rgb(255, 138, 4);">{{num}}</h2>
+                        <h4 style="color: rgb(78, 78, 76);">support</h4>
+                        <h4 style="color: rgb(78, 78, 76);">support</h4>
+                    </div>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</div>
