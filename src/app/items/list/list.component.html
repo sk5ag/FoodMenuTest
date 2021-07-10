@@ -1,0 +1,51 @@
+<mat-toolbar color="none">
+    <span>
+        <div>
+            <button mat-icon-button color="none" [matMenuTriggerFor]="menu" aria-label="Example icon button with a home icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+        </div>
+    </span>
+    <div fxHide.lt-md>
+        <span class="column-label">Columns</span>
+        <mat-slider [min]="3" [max]="6" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
+    </div>
+    <div>
+        <button mat-icon-button color="none" class="button-margins" aria-label="Example icon button with a home icon">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
+            <mat-card class="mat-elevation-z1">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Shiba Inu {{ num }}</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../assets/images/deserts.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                    </p>
+                    <p style="text-align: right;">
+                        <strong>
+                            ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
+                        </strong>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions style="text-align: end;">
+                    <button mat-button color="warn">LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

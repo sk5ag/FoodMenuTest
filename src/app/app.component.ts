@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FoodMenu-Layout';
-  gridColumns = 3;
 }

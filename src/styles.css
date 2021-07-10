@@ -23,13 +23,19 @@ mat-toolbar {
     padding: 16px;
 }
 
+.category-area {
+    width: 50%;
+    margin: auto;
+}
+
 .column-label {
     margin-right: 8px;
     font-size: 1rem;
 }
 
 .footer-area {
-    background-color: #C0C0C0;
+    background-color: #e4e1e1;
+    text-align: center;
 }
 
 .footer-area h2 {
@@ -37,4 +43,20 @@ mat-toolbar {
     color: rgb(78, 78, 76);
     text-align: center;
     padding: 15px;
+}
+
+.footer-area h4 {
+    font-size: medium;
+    color: rgb(78, 78, 76);
+    text-align: center;
+    padding: 15px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_prim.png');
+    color: red;
+}
+
+.carousel-control-next-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_ult.png')
 }

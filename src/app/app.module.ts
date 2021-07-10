@@ -11,6 +11,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './categories/category/category.component';
 import { HeaderComponent } from './headerfooter/header/header.component';
 import { FooterComponent } from './headerfooter/footer/footer.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ListComponent } from './items/list/list.component';
+import { AddItemComponent } from './items/add-item/add-item.component';
+import { AddCollectionComponent } from './items/add-collection/add-collection.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FooterComponent } from './headerfooter/footer/footer.component';
     SponserComponentComponent,
     CategoryComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ToolbarComponent,
+    ListComponent,
+    AddItemComponent,
+    AddCollectionComponent
   ],
   imports: [
     BrowserModule,

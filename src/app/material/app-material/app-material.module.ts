@@ -5,10 +5,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-
 
 const MaterialComponent = [
   CommonModule,
@@ -17,6 +18,8 @@ const MaterialComponent = [
   MatButtonModule,
   MatSliderModule,
   MatGridListModule,
+  MatMenuModule,
+  MatIconModule,
   FormsModule,
   FlexLayoutModule
 ];
