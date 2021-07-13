@@ -1,44 +1,17 @@
 <div class="content">
 
     <ngb-carousel interval="false">
-        <ng-template ngbSlide *ngFor="let num of [1,2,3,4]">
+        <!-- <ng-template ngbSlide *ngFor="let num of [1,2,3,4]"> -->
+        <ng-template ngbSlide *ngFor="let num of ['Breakfast','Deserts', 'Offers','Dinner','Lunch','Beverages']">
             <div class="category-area">
                 <div fxFlex="90%">
-                    <mat-card>
-                        <h2>{{num}}</h2>
-                        <img mat-card-image src="../../../assets/images/1.png" alt="Photo of a Shiba Inu">
-                    </mat-card>
+                    <!-- <mat-card> -->
+                    <h1>{{num}}</h1>
+                    <!-- <img mat-card-image src="../../../assets/images/1.png" alt="Photo of a Shiba Inu"> -->
+                    <!-- </mat-card> -->
                 </div>
             </div>
         </ng-template>
     </ngb-carousel>
-    <!-- 
-    <div fxLayout="row wrap" fxLayoutGap="10px grid">
-        <div fxFlex="20%">
-            <mat-card class="mat-elevation-z1">
-                <img mat-card-image src="../../../assets/images/drink_2.png" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-        <div fxFlex="20%">
-            <mat-card class="mat-elevation-z1">
-                <img mat-card-image src="../../../assets/images/burger_2.png" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-        <div fxFlex="20%">
-            <mat-card class="mat-elevation-z1">
-                <img mat-card-image src="../../../assets/images/muffin.png" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-        <div fxFlex="20%">
-            <mat-card class="mat-elevation-z1">
-                <img mat-card-image src="../../../assets/images/fruits.png" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-        <div fxFlex="20%">
-            <mat-card class="mat-elevation-z1">
-                <img mat-card-image src="../../../assets/images/fruits.png" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-    </div>
-     -->
+
 </div>
