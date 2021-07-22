@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ListComponent } from 'src/app/items/list/list.component';
 
 @Component({
   selector: 'app-category',
@@ -8,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class CategoryComponent implements OnInit {
 
   gridColumns = 3;
-  constructor() { }
+  showFiller = false;
+
+  constructor(
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  openCategory() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "90%";
+    dialogConfig.height = "90%";
+    this.dialog.open(ListComponent, dialogConfig);
   }
 
 }

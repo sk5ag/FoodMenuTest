@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <span>ORDER ITEM</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<br>
+<div>
+    <mat-card>
+        <img mat-card-image src="../assets/images/deserts.jpg" alt="Photo of a Shiba Inu">
+
+        <mat-card-header>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>
+                <div>
+                    <mat-icon [ngStyle]="{'color':'#f7c626'}">star</mat-icon>
+                    <mat-icon [ngStyle]="{'color':'#f7c626'}">star</mat-icon>
+                    <mat-icon [ngStyle]="{'color':'#f7c626'}">star</mat-icon>
+                    <mat-icon [ngStyle]="{'color':'#f7c626'}">star</mat-icon>
+                    <mat-icon [ngStyle]="{'color':'gray'}">star_border</mat-icon>
+                </div>
+            </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-toolbar color="none">
+
+            <span>
+            <div style="font-size: 20pt; font-weight: bold;">
+                $4.99
+            </div>
+        </span>
+            <div style="text-align: end; font-size: 15pt;">
+                <button mat-mini-fab color="warn"><mat-icon>remove</mat-icon></button> <input type="text" value="95" style="max-width: 50px;margin:10px; text-align: center;"> <button mat-mini-fab color="primary"><mat-icon>add</mat-icon></button>
+            </div>
+        </mat-toolbar>
+        <mat-card-content>
+            <div style="font-size: 15pt; margin-top: 20px;">
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+            </div>
+            <div style="font-size: 20pt; font-weight: bold; margin-top: 25px;">
+                Choice of add on:
+                <br><br><br><br>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions style="text-align:center; margin-bottom: 20px;">
+            <button mat-raised-button color="primary">Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>`

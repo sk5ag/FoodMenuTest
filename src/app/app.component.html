@@ -1,4 +1,30 @@
+<mat-toolbar color="none">
+    <span>
+        <div>
+            <button mat-icon-button color="none" [matMenuTriggerFor]="menu" aria-label="Example icon button with a home icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu"  class="menu_size">
+                <button mat-menu-item (click)="onCreateItem()">Add items</button>
+                <button mat-menu-item (click)="onCreateCollection()">Add collections</button>
+                <button mat-menu-item (click)="openUnconfirmedOrders()">Unconfirmed orders</button>
+                <button mat-menu-item (click)="openConfirmedOrders()">Confirmed orders</button>
+                <button mat-menu-item (click)="openItemOrder()">Item order</button>
+            </mat-menu>
+        </div>
+    </span>
+    <div fxHide.lt-md>
+        <span class="column-label">Columns</span>
+        <mat-slider [min]="3" [max]="6" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
+    </div>
+    <div>
+        <button mat-icon-button color="none" (click)="openCart()" class="button-margins" aria-label="Example icon button with a home icon">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
 <app-sponser-component></app-sponser-component>
+<br>
 <app-category></app-category>
-<app-list></app-list>
+<!-- <app-list></app-list> -->
 <app-footer></app-footer>

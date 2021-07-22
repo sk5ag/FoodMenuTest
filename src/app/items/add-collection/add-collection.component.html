@@ -1,1 +1,24 @@
-<p>add-collection works!</p>
+<mat-toolbar>
+    <span>NEW COLLECTION</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput></textarea>
+</mat-form-field>
+<div>
+    <button mat-stroked-button mat-dialog-close color="warn">Close</button>
+</div>

@@ -1,17 +1,27 @@
 <div class="content">
-
-    <ngb-carousel interval="false">
-        <!-- <ng-template ngbSlide *ngFor="let num of [1,2,3,4]"> -->
-        <ng-template ngbSlide *ngFor="let num of ['Breakfast','Deserts', 'Offers','Dinner','Lunch','Beverages']">
-            <div class="category-area">
-                <div fxFlex="90%">
-                    <!-- <mat-card> -->
-                    <h1>{{num}}</h1>
-                    <!-- <img mat-card-image src="../../../assets/images/1.png" alt="Photo of a Shiba Inu"> -->
-                    <!-- </mat-card> -->
-                </div>
-            </div>
-        </ng-template>
-    </ngb-carousel>
-
+    <div fxLayout="row wrap" fxLayoutGap="26px grid">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of ['All', 'Breakfast', 'Lunch', 'Dinner', 'Desserts', 'Shisha', 'Offers']">
+            <mat-card class="mat-elevation-z1" (click)="openCategory()">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title> {{ num }}</mat-card-title>
+                    <mat-card-subtitle>Open {{ num }} Menu</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../assets/images/deserts.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                    </p>
+                    <p style="text-align: right;">
+                        <strong>
+                            ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
+                        </strong>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions style="text-align: end;">
+                    <!-- <button mat-stroked-button (click)="openCategory()" color="primary"><mat-icon>menu_book</mat-icon></button> -->
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
 </div>

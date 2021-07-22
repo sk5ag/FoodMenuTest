@@ -15,6 +15,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListComponent } from './items/list/list.component';
 import { AddItemComponent } from './items/add-item/add-item.component';
 import { AddCollectionComponent } from './items/add-collection/add-collection.component';
+import { ItemOrderComponent } from './order/item-order/item-order.component';
+import { UnConfirmedOrdersComponent } from './order/un-confirmed-orders/un-confirmed-orders.component';
+import { ConfirmedOrdersComponent } from './order/confirmed-orders/confirmed-orders.component';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ItemComponent } from './items/item/item.component';
+import { ImageUploadComponent } from './upload/image-upload/image-upload.component';
+
 
 @NgModule({
   declarations: [
@@ -26,16 +34,29 @@ import { AddCollectionComponent } from './items/add-collection/add-collection.co
     ToolbarComponent,
     ListComponent,
     AddItemComponent,
-    AddCollectionComponent
+    AddCollectionComponent,
+    ItemOrderComponent,
+    UnConfirmedOrdersComponent,
+    ConfirmedOrdersComponent,
+    ItemComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    NgbModule
+    NgbModule,
+    MatPaginatorModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddItemComponent, 
+    ConfirmedOrdersComponent, 
+    AddCollectionComponent, 
+    ItemOrderComponent, 
+    UnConfirmedOrdersComponent,
+    ImageUploadComponent]
 })
 export class AppModule { }

@@ -1,25 +1,9 @@
-<mat-toolbar color="none">
-    <span>
-        <div>
-            <button mat-icon-button color="none" [matMenuTriggerFor]="menu" aria-label="Example icon button with a home icon">
-              <mat-icon>menu</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
-            </mat-menu>
-        </div>
-    </span>
-    <div fxHide.lt-md>
-        <span class="column-label">Columns</span>
-        <mat-slider [min]="3" [max]="6" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
-    </div>
-    <div>
-        <button mat-icon-button color="none" class="button-margins" aria-label="Example icon button with a home icon">
-          <mat-icon>shopping_cart</mat-icon>
-        </button>
-    </div>
+<mat-toolbar>
+    <span>MENU ITEMS</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
 </mat-toolbar>
+<br>
 
 <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
@@ -43,7 +27,7 @@
                 </mat-card-content>
                 <mat-card-actions style="text-align: end;">
                     <button mat-button color="warn">LIKE</button>
-                    <button mat-button>SHARE</button>
+                    <button mat-button (click)="openItem()">ORDER</button>
                 </mat-card-actions>
             </mat-card>
         </div>

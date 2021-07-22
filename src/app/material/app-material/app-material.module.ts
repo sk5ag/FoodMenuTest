@@ -7,9 +7,20 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import {MatDividerModule} from '@angular/material/divider'; 
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const MaterialComponent = [
   CommonModule,
@@ -20,7 +31,20 @@ const MaterialComponent = [
   MatGridListModule,
   MatMenuModule,
   MatIconModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatChipsModule,
+  MatAutocompleteModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatDividerModule,
+  MatDialogModule,
+  MatProgressBarModule,
+  MatSnackBarModule,
   FormsModule,
+  ReactiveFormsModule,
   FlexLayoutModule
 ];
 

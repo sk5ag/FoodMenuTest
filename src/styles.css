@@ -15,12 +15,35 @@ mat-toolbar {
     justify-content: space-between;
 }
 
+.mat-menu-panel.menu_size {
+    width: 300px;
+}
+
 .banner {
     width: 100%;
 }
 
 .content {
     padding: 16px;
+}
+
+.controls-container {
+    overflow: auto;
+}
+
+.content-btn {
+    padding: 6px;
+    text-align: start;
+}
+
+.content-btn-camera {
+    padding-bottom: 16px;
+    text-align: end;
+    padding-right: 6px;
+}
+
+.example-chip-list {
+    width: 100%;
 }
 
 .category-area {
@@ -52,11 +75,49 @@ mat-toolbar {
     padding: 15px;
 }
 
+.carousel {
+    text-align: center;
+}
+
 .carousel-control-prev-icon {
     background-image: url('https://apufpel.com.br/assets/img/seta_prim.png');
-    color: red;
 }
 
 .carousel-control-next-icon {
     background-image: url('https://apufpel.com.br/assets/img/seta_ult.png')
+}
+
+#slider {
+    height: 350px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+    text-align: center;
+}
+
+.menu_size {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
 }
