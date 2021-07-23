@@ -9,7 +9,7 @@ import { ListComponent } from 'src/app/items/list/list.component';
 })
 export class CategoryComponent implements OnInit {
 
-  gridColumns = 3;
+  gridColumns = 4;
   showFiller = false;
 
   constructor(

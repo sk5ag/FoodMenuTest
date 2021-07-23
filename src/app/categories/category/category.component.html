@@ -1,5 +1,16 @@
+<mat-toolbar color="none">
+    <span>
+        <div>
+        </div>
+    </span>
+    <div fxHide.lt-md>
+        <span class="column-label">Columns</span>
+        <mat-slider [min]="3" [max]="5" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
+    </div>
+</mat-toolbar>
+
 <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="26px grid">
+    <div fxLayout="row wrap" fxLayoutGap="15px grid">
         <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of ['All', 'Breakfast', 'Lunch', 'Dinner', 'Desserts', 'Shisha', 'Offers']">
             <mat-card class="mat-elevation-z1" (click)="openCategory()">
                 <mat-card-header>

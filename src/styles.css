@@ -112,6 +112,15 @@ table {
     width: 100%;
 }
 
+.mat-column-cost {
+    width: 32px;
+    text-align: center;
+}
+
+tr.mat-footer-row {
+    font-weight: bold;
+}
+
 .mat-form-field {
     font-size: 14px;
     width: 100%;

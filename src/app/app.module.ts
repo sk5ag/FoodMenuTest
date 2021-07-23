@@ -22,6 +22,7 @@ import { ConfirmedOrdersComponent } from './order/confirmed-orders/confirmed-ord
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ItemComponent } from './items/item/item.component';
 import { ImageUploadComponent } from './upload/image-upload/image-upload.component';
+import { CartComponent } from './items/cart/cart.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ImageUploadComponent } from './upload/image-upload/image-upload.compone
     UnConfirmedOrdersComponent,
     ConfirmedOrdersComponent,
     ItemComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,8 @@ import { ImageUploadComponent } from './upload/image-upload/image-upload.compone
     AddCollectionComponent, 
     ItemOrderComponent, 
     UnConfirmedOrdersComponent,
-    ImageUploadComponent]
+    ImageUploadComponent,
+    CartComponent
+  ]
 })
 export class AppModule { }

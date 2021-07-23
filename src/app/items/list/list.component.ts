@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ListComponent implements OnInit {
 
-  gridColumns = 3;
+  gridColumns = 4;
   durationInSeconds = 5;
 
   constructor(

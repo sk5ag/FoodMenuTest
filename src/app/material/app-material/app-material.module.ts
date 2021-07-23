@@ -15,10 +15,10 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
-import {MatDividerModule} from '@angular/material/divider'; 
-import {MatProgressBarModule} from '@angular/material/progress-bar'; 
-import {MatSnackBarModule} from '@angular/material/snack-bar'; 
-
+import { MatDividerModule } from '@angular/material/divider'; 
+import { MatProgressBarModule } from '@angular/material/progress-bar'; 
+import { MatSnackBarModule } from '@angular/material/snack-bar'; 
+import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -43,6 +43,7 @@ const MaterialComponent = [
   MatDialogModule,
   MatProgressBarModule,
   MatSnackBarModule,
+  MatListModule,
   FormsModule,
   ReactiveFormsModule,
   FlexLayoutModule
