@@ -11,7 +11,6 @@ export class CategoryComponent implements OnInit {
 
   gridColumns = 4;
   showFiller = false;
-
   constructor(
     private dialog: MatDialog
   ) { }

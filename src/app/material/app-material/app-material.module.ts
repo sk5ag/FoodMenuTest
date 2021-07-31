@@ -19,6 +19,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar'; 
 import { MatSnackBarModule } from '@angular/material/snack-bar'; 
 import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -44,6 +45,7 @@ const MaterialComponent = [
   MatProgressBarModule,
   MatSnackBarModule,
   MatListModule,
+  MatExpansionModule,
   FormsModule,
   ReactiveFormsModule,
   FlexLayoutModule
