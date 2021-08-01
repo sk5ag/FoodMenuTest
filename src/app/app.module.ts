@@ -23,7 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ItemComponent } from './items/item/item.component';
 import { ImageUploadComponent } from './upload/image-upload/image-upload.component';
 import { CartComponent } from './items/cart/cart.component';
-
+import { UserPreferencesService } from './shared/user-preferences.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { CartComponent } from './items/cart/cart.component';
     NgbModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [UserPreferencesService],
   bootstrap: [AppComponent],
   entryComponents: [
     AddItemComponent, 

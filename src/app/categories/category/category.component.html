@@ -1,11 +1,15 @@
 <mat-toolbar color="none">
     <span>
-        <div>
+        <div *ngIf="iniLanguage == 'English'; else showEnglish">
+            <button mat-icon-button (click)='changeLanguage("Kurdish")'><mat-icon>language</mat-icon> | KU</button>
         </div>
+        <ng-template #showEnglish>
+            <button mat-icon-button (click)='changeLanguage("English")'><mat-icon>language</mat-icon> | EN</button>
+        </ng-template>
     </span>
     <div fxHide.lt-md>
         <span class="column-label">Columns</span>
-        <mat-slider [min]="3" [max]="5" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
+        <mat-slider [min]="3" [max]="8" [thumbLabel]="true" [(ngModel)]="gridColumns"> </mat-slider>
     </div>
 </mat-toolbar>
 
@@ -14,20 +18,27 @@
         <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of ['All', 'Breakfast', 'Lunch', 'Dinner', 'Desserts', 'Shisha', 'Offers']">
             <mat-card class="mat-elevation-z1" (click)="openCategory()">
                 <mat-card-header>
-                    <div mat-card-avatar class="example-header-image"></div>
+                    <!-- <div mat-card-avatar class="example-header-image"></div> -->
                     <mat-card-title> {{ num }}</mat-card-title>
                     <mat-card-subtitle>Open {{ num }} Menu</mat-card-subtitle>
                 </mat-card-header>
                 <img mat-card-image src="../assets/images/deserts.jpg" alt="Photo of a Shiba Inu">
                 <mat-card-content>
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-                    </p>
-                    <p style="text-align: right;">
-                        <strong>
-                            ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
-                        </strong>
-                    </p>
+                    <div *ngIf="language == 'English'; then englishishBlock else kurdishBlock">
+
+                    </div>
+                    <ng-template #englishishBlock>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </ng-template>
+                    <ng-template #kurdishBlock>
+                        <p style="text-align: right;">
+                            <strong>
+                                ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
+                            </strong>
+                        </p>
+                    </ng-template>
                 </mat-card-content>
                 <mat-card-actions style="text-align: end;">
                     <!-- <button mat-stroked-button (click)="openCategory()" color="primary"><mat-icon>menu_book</mat-icon></button> -->

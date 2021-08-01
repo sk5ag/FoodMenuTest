@@ -1,29 +1,49 @@
 <mat-toolbar>
     <span>MENU ITEMS</span>
     <span class="fill-remaining-space"></span>
-    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+    <div *ngIf="iniLanguage == 'English'; else showEnglish">
+        <button mat-icon-button (click)='changeLanguage("Kurdish")'><mat-icon>language</mat-icon> | KU</button>
+        <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+    </div>
+    <ng-template #showEnglish>
+        <div>
+            <button mat-icon-button (click)='changeLanguage("English")'><mat-icon>language</mat-icon> | EN</button>
+            <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+        </div>
+
+    </ng-template>
 </mat-toolbar>
 <br>
-
 <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
         <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
             <mat-card class="mat-elevation-z1">
                 <mat-card-header>
-                    <div mat-card-avatar class="example-header-image"></div>
+                    <!-- <div mat-card-avatar class="example-header-image"></div> -->
                     <mat-card-title>Shiba Inu {{ num }}</mat-card-title>
                     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    <span fxFlex></span>
+                    <button mat-icon-button>
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
                 </mat-card-header>
                 <img mat-card-image src="../assets/images/deserts.jpg" alt="Photo of a Shiba Inu">
                 <mat-card-content>
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-                    </p>
-                    <p style="text-align: right;">
-                        <strong>
-                            ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
-                        </strong>
-                    </p>
+                    <div *ngIf="language == 'English'; then englishishBlock else kurdishBlock">
+
+                    </div>
+                    <ng-template #englishishBlock>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </ng-template>
+                    <ng-template #kurdishBlock>
+                        <p style="text-align: right;">
+                            <strong>
+                                ماسی فرێش; دە جۆری ماسی; شریمپی جامبۆی برژاو; دەریایەک لە خۆشی; ماسی لە سەر شێوازی رێستۆرانتی دەریایی. ستێک
+                            </strong>
+                        </p>
+                    </ng-template>
                 </mat-card-content>
                 <mat-card-actions style="text-align: end;">
                     <button mat-button color="warn">LIKE</button>
