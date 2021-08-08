@@ -19,6 +19,7 @@ export class ListComponent implements OnInit {
     public listItemDialogRef: MatDialogRef<ListComponent>,
     private dialog: MatDialog,
     private _snakBar: MatSnackBar,
+    private _snakBarItem: MatSnackBar,
     private _userPreferencesService: UserPreferencesService
   ) {
   }
@@ -58,6 +59,10 @@ export class ListComponent implements OnInit {
     dialogConfig.width = "90%";
     dialogConfig.height = "90%";    
     this.dialog.open(ItemComponent, dialogConfig);
+  }
+
+  openSnackBar() {
+    this._snakBarItem.open("1 X Pizza has been added to Order.", "Close");
   }
 
 }

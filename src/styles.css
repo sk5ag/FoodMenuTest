@@ -11,8 +11,9 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-mat-toolbar {
+.mat-toolbar {
     justify-content: space-between;
+    background: white;
 }
 
 .mat-menu-panel.menu_size {
@@ -124,9 +125,24 @@ tr.mat-footer-row {
 .mat-form-field {
     font-size: 14px;
     width: 100%;
+    margin: 5px;
 }
 
-td,
-th {
+.mat-badge-content {
+    width: auto;
+    height: fit-content;
+    display: grid;
+    min-width: 32px;
+    min-height: 28px;
+    text-align: center;
+    align-items: center;
+}
+
+
+/* th {
     width: 25%;
+} */
+
+small {
+    color: red;
 }

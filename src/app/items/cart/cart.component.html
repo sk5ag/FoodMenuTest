@@ -1,8 +1,49 @@
 <mat-toolbar>
-    <span>ITEMS IN CART</span>
+    <span>MY CART</span>
     <span class="fill-remaining-space"></span>
     <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
 </mat-toolbar>
+<h3>Items and their quantities can be changed before check-out.</h3>
+<br>
+
+<mat-card>
+    <table dataSource="transactions">
+        <div *ngFor="let transaction of transactions" style="padding: 5px; margin: 5px;">
+
+            <tr style="padding: 5px; margin: 5px; vertical-align: middle;">
+                <td rowspan="2" style="margin-right: 25px;width: 100px;">
+                    <img mat-card-image src="../assets/images/deserts.jpg" style="width: 100px; height: 100px;" alt="Photo of a Shiba Inu">
+                </td>
+                <td style="width: 600px;">{{transaction.item}}</td>
+                <td style="width: 30%; text-align: center; ">
+                    <tr>
+                        <td>
+                            {{transaction.cost | currency}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button mat-icon-button color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary">
+                                <mat-icon>remove_circle_outline</mat-icon>
+                            </button> 10
+                            <button mat-icon-button color="primary">
+                                <mat-icon>add_circle</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+
+                </td>
+            </tr>
+
+            <mat-divider></mat-divider>
+            <br>
+        </div>
+    </table>
+</mat-card>
+
 <br>
 <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
     <!-- Item Column -->
@@ -24,6 +65,7 @@
     <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
 </table>
 <br><br>
-<div>
+<div style="text-align: center;">
+    <button mat-stroked-button color="primary" style="margin: 0 5px 0 5px;">Check-out</button>
     <button mat-stroked-button mat-dialog-close color="warn">Close</button>
 </div>

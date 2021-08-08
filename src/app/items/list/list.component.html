@@ -20,7 +20,17 @@
             <mat-card class="mat-elevation-z1">
                 <mat-card-header>
                     <!-- <div mat-card-avatar class="example-header-image"></div> -->
-                    <mat-card-title>Shiba Inu {{ num }}</mat-card-title>
+                    <mat-card-title>
+                        <span matBadge="40%" matBadgePosition="after" matBadgeSize="small" matBadgeColor="warn" style="margin-left: 15px;">
+                            &nbsp;
+                        </span>
+                        <span matBadge="Offer" matBadgeSize="small" matBadgePosition="after" matBadgeColor="accent">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <p style="margin-top: 10px;">
+                            Shiba Inu {{ num }}
+                        </p>
+                    </mat-card-title>
                     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
                     <span fxFlex></span>
                     <button mat-icon-button>
@@ -45,9 +55,16 @@
                         </p>
                     </ng-template>
                 </mat-card-content>
-                <mat-card-actions style="text-align: end;">
-                    <button mat-button color="warn">LIKE</button>
-                    <button mat-button (click)="openItem()">ORDER</button>
+                <mat-card-actions>
+                    <button mat-button style="width: 33%; padding: 2; margin: 0;" color="warn">
+                        <mat-icon>favorite_border</mat-icon>
+                    </button>
+                    <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openItem()" color="primary">
+                        <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openSnackBar()" color="primary">
+                        <mat-icon>add</mat-icon>
+                    </button>
                 </mat-card-actions>
             </mat-card>
         </div>

@@ -14,7 +14,7 @@ interface Transaction {
 export class CartComponent {
   displayedColumns: string[] = ['item', 'cost'];
   transactions: Transaction[] = [
-    {item: 'Beach ball', cost: 4},
+    {item: 'Beach ball  Beach ball Beach ball', cost: 4},
     {item: 'Towel', cost: 5},
     {item: 'Frisbee', cost: 2},
     {item: 'Sunscreen', cost: 4},

@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AddCollectionComponent } from '../add-collection/add-collection.component';
 import { ImageUploadComponent } from 'src/app/upload/image-upload/image-upload.component';
+import { AddOnComponent } from '../add-on/add-on.component';
 
 @Component({
   selector: 'app-add-item',
@@ -24,6 +25,7 @@ export class AddItemComponent implements OnInit {
   filteredCollections: Observable<string[]>;
   collections: string[] = ['All'];
   allCollections: string[] = ['Breakfast', 'Lunch', 'Dinner', 'Offer of the day', 'Sweets'];
+  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 
   @ViewChild('collectionInput') collectionInput: ElementRef<HTMLInputElement>;
 
@@ -49,6 +51,9 @@ export class AddItemComponent implements OnInit {
     this.addItemDialogRef.close();
   }
 
+  openAddOn() {  
+    this.dialog.open(AddOnComponent);
+  }
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();

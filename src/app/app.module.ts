@@ -24,6 +24,7 @@ import { ItemComponent } from './items/item/item.component';
 import { ImageUploadComponent } from './upload/image-upload/image-upload.component';
 import { CartComponent } from './items/cart/cart.component';
 import { UserPreferencesService } from './shared/user-preferences.service';
+import { AddOnComponent } from './items/add-on/add-on.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { UserPreferencesService } from './shared/user-preferences.service';
     ConfirmedOrdersComponent,
     ItemComponent,
     ImageUploadComponent,
-    CartComponent
+    CartComponent,
+    AddOnComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { UserPreferencesService } from './shared/user-preferences.service';
     ItemOrderComponent, 
     UnConfirmedOrdersComponent,
     ImageUploadComponent,
-    CartComponent
+    CartComponent,
+    AddOnComponent
   ]
 })
 export class AppModule { }

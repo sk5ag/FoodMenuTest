@@ -44,5 +44,16 @@
     <textarea matInput></textarea>
 </mat-form-field>
 <div>
+    <h2>Add-on list</h2>
+    <button mat-stroked-button mat-dialog-close color="warn" (click)="openAddOn()">Add-on to item</button>
+    <mat-list role="list">
+        <mat-list-item role="listitem">Item 1 -
+            <small>&nbsp; [+ $ 0]</small>
+        </mat-list-item>
+        <mat-list-item role="listitem">Item 2 - <small>&nbsp; [+ $ 0.50]</small></mat-list-item>
+        <mat-list-item role="listitem">Item 3 - <small>&nbsp; [+ $ 1:00]</small></mat-list-item>
+    </mat-list>
+</div>
+<div>
     <button mat-stroked-button mat-dialog-close color="warn">Close</button>
 </div>

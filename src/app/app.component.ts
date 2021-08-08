@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddCollectionComponent } from './items/add-collection/add-collection.component';
 import { AddItemComponent } from './items/add-item/add-item.component';
+import { AddOnComponent } from './items/add-on/add-on.component';
 import { CartComponent } from './items/cart/cart.component';
 import { ConfirmedOrdersComponent } from './order/confirmed-orders/confirmed-orders.component';
 import { ItemOrderComponent } from './order/item-order/item-order.component';
@@ -74,4 +75,6 @@ export class AppComponent {
     dialogConfig.height = "95%";    
     this.dialog.open(ItemOrderComponent, dialogConfig);
   }
+
+
 }

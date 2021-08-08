@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Add extra</h2>
+<mat-dialog-content>Add extra stuff to the current item from the menu</mat-dialog-content>
+<br>
+<p>
+    <mat-checkbox [(ngModel)]="checked">Free of charge</mat-checkbox>
+</p>
+<mat-form-field appearance="legacy">
+    <mat-label>Add-on title</mat-label>
+    <input matInput placeholder="Enter a title for add-on">
+    <mat-icon matSuffix>description</mat-icon>
+    <mat-hint>Title for add-on</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="legacy">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Enter cost of add-on">
+    <mat-icon matSuffix>money</mat-icon>
+    <mat-hint>Add-on price</mat-hint>
+</mat-form-field>
+<br>
+<br>
+<mat-dialog-actions>
+    <button mat-stroked-button>Save</button>
+    <button mat-stroked-button mat-dialog-close color="warn">Close</button>
+</mat-dialog-actions>
