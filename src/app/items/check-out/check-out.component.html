@@ -1,0 +1,57 @@
+<mat-toolbar>
+    <span>CHECKOUT</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header [collapsedHeight]="'fit-content'">
+            <div style="margin: 10px 0px 10px 0px;">
+                <mat-panel-title>
+                    Dining in the restaurant?
+                </mat-panel-title>
+                <mat-panel-description>
+                    Enter host name and table number
+                </mat-panel-description>
+            </div>
+        </mat-expansion-panel-header>
+        <mat-form-field appearance="fill">
+            <mat-label>Host name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Table Number</mat-label>
+            <mat-select>
+                <mat-option value="one">Table 1</mat-option>
+                <mat-option value="two">Table 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header [collapsedHeight]="'fit-content'">
+            <div style="margin: 10px 0px 10px 0px;">
+                <mat-panel-title>
+                    Deliver to address?
+                </mat-panel-title>
+                <mat-panel-description>
+                    Enter mobile number and delivery address
+                </mat-panel-description>
+            </div>
+        </mat-expansion-panel-header>
+        <mat-form-field appearance="legacy">
+            <mat-label>Mobile</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Enter a contact number</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <mat-label>Delivery Address</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>maps_home_work</mat-icon>
+            <mat-hint>Enter delivery address</mat-hint>
+        </mat-form-field>
+    </mat-expansion-panel>
+</mat-accordion>
+<div style="text-align: center;">
+    <button mat-stroked-button mat-dialog-close style="margin: 20px 0 0 0;" color="warn">Close</button>
+</div>

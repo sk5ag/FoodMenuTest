@@ -50,8 +50,8 @@ export class CategoryComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = "90%";
-    dialogConfig.height = "90%";
+    dialogConfig.width = "95%";
+    dialogConfig.height = "95%";
     this.dialog.open(ListComponent, dialogConfig);
   }
 
