@@ -26,6 +26,8 @@ import { CartComponent } from './items/cart/cart.component';
 import { UserPreferencesService } from './shared/user-preferences.service';
 import { AddOnComponent } from './items/add-on/add-on.component';
 import { CheckOutComponent } from './items/check-out/check-out.component';
+import { CartSnakbarComponent } from './items/list/cart-snakbar/cart-snakbar.component';
+import { FavSnakbarComponent } from './items/list/fav-snakbar/fav-snakbar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,10 @@ import { CheckOutComponent } from './items/check-out/check-out.component';
     ImageUploadComponent,
     CartComponent,
     AddOnComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    CartSnakbarComponent,
+    CartSnakbarComponent,
+    FavSnakbarComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +71,9 @@ import { CheckOutComponent } from './items/check-out/check-out.component';
     ImageUploadComponent,
     CartComponent,
     CheckOutComponent,
-    AddOnComponent
+    AddOnComponent,
+    CartSnakbarComponent,
+    FavSnakbarComponent
   ]
 })
 export class AppModule { }

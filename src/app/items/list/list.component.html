@@ -86,13 +86,13 @@
                     </ng-template>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button style="width: 33%; padding: 2; margin: 0;" color="warn">
+                    <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openSnackBar('fav')" color="warn">
                         <mat-icon>favorite_border</mat-icon>
                     </button>
                     <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openItem()" color="primary">
                         <mat-icon>visibility</mat-icon>
                     </button>
-                    <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openSnackBar()" color="primary">
+                    <button mat-button style="width: 33%; padding: 2; margin: 0;" (click)="openSnackBar('cart')" color="primary">
                         <mat-icon>add</mat-icon>
                     </button>
                 </mat-card-actions>

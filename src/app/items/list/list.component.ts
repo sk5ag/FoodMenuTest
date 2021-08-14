@@ -3,6 +3,8 @@ import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dial
 import { ItemComponent } from '../item/item.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserPreferencesService } from 'src/app/shared/user-preferences.service';
+import { CartSnakbarComponent } from './cart-snakbar/cart-snakbar.component';
+import { FavSnakbarComponent } from './fav-snakbar/fav-snakbar.component';
 
 @Component({
   selector: 'app-list',
@@ -61,8 +63,13 @@ export class ListComponent implements OnInit {
     this.dialog.open(ItemComponent, dialogConfig);
   }
 
-  openSnackBar() {
-    this._snakBarItem.open("1 X Pizza has been added to Order.", "Close");
+  openSnackBar(SnackBarComp) {
+    // this._snakBarItem.open("1 X Pizza has been added to Cart.", "Close");
+    if (SnackBarComp == 'fav') {
+      this._snakBarItem.openFromComponent(FavSnakbarComponent, {duration: 5000})
+    } else {
+      this._snakBarItem.openFromComponent(CartSnakbarComponent, {duration: 5000})
+    }
   }
 
 }
