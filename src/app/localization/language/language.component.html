@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <span>SETTINGS</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+
+<br>
+
+<div style="text-align: center;">
+    <button mat-button color="primary" [matMenuTriggerFor]="menu" aria-label="Example icon button with a home icon">
+        <mat-icon>language</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="menu_size">
+        <button mat-menu-item (click)='changeLanguage("English")'>English</button>
+        <button mat-menu-item (click)='changeLanguage("Kurdish")'>Kurdish</button>
+        <button mat-menu-item (click)='changeLanguage("Arabic")'>Arabic</button>
+    </mat-menu>
+</div>
+<div style="text-align: center;">
+    <button mat-button style="margin: 20px 0 0 0;" color="primary">I'm in the restaurant</button>
+    <br>
+    <button mat-stroked-button style="margin: 20px 0 0 0;" color="primary">I want my order delivered to me</button>
+</div>

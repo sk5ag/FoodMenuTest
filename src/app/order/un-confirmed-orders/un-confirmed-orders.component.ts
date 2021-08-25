@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { UnconfirmedOrderItemsComponent } from './unconfirmed-order-items/unconfirmed-order-items.component';
 
 export interface UserData {
   id: string;
@@ -27,7 +28,7 @@ const NAMES: string[] = [
 })
 export class UnConfirmedOrdersComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['item', 'status', 'quantity', 'orderquantity'];
+  displayedColumns: string[] = ['item', 'status', 'order', 'action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -53,6 +54,16 @@ export class UnConfirmedOrdersComponent implements AfterViewInit {
     this.unconfirmedOrderDialogRef.close();
   }
 
+  onPreview() {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.width = "95%";
+      dialogConfig.height = "95%";    
+      this.dialog.open(UnconfirmedOrderItemsComponent, dialogConfig);
+    
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -73,4 +84,5 @@ function createNewUser(id: number): UserData {
     progress: Math.round(Math.random() * 100).toString(),
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))]
   };
+
 }

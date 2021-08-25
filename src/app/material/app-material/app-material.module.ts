@@ -21,7 +21,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion'; 
 import { MatBadgeModule } from '@angular/material/badge'; 
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import { MatCheckboxModule } from '@angular/material/checkbox'; 
+import { MatTabsModule } from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -50,6 +51,7 @@ const MaterialComponent = [
   MatExpansionModule,
   MatBadgeModule,
   MatCheckboxModule,
+  MatTabsModule,
   
   FormsModule,
   ReactiveFormsModule,

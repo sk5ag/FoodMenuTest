@@ -1,0 +1,26 @@
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header [collapsedHeight]="'fit-content'">
+            <div style="margin: 10px 0px 10px 0px;">
+                <mat-panel-title>
+                    Deliver to address?
+                </mat-panel-title>
+                <mat-panel-description>
+                    Enter mobile number and delivery address
+                </mat-panel-description>
+            </div>
+        </mat-expansion-panel-header>
+        <mat-form-field appearance="legacy">
+            <mat-label>Mobile</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Enter a contact number</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <mat-label>Delivery Address</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>maps_home_work</mat-icon>
+            <mat-hint>Enter delivery address</mat-hint>
+        </mat-form-field>
+    </mat-expansion-panel>
+</mat-accordion>

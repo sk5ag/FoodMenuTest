@@ -1,28 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ListComponent } from 'src/app/items/list/list.component';
+import { MatDialogRef } from '@angular/material/dialog';
 import { UserPreferencesService } from 'src/app/shared/user-preferences.service';
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  selector: 'app-language',
+  templateUrl: './language.component.html',
+  styleUrls: ['./language.component.css']
 })
-export class CategoryComponent implements OnInit {
+export class LanguageComponent implements OnInit {
 
-  gridColumns = 4;
-  showFiller = false;
   iniLanguage = "English";
 
   constructor(
-    private dialog: MatDialog,
+    public LanguageDialogRef: MatDialogRef<LanguageComponent>,
     private _userPreferencesService: UserPreferencesService
-  ) {}
+  ) { }
 
+  ngOnInit(): void {
+  }
+  
   get language(): string {
     return this._userPreferencesService.languagePreference;
   }
 
+  
   changeLanguage(myLanguage){
     console.log('The selected language is : ', myLanguage);
     // this._userPreferencesService.languagePreference = myLanguage;
@@ -34,23 +35,12 @@ export class CategoryComponent implements OnInit {
       this.iniLanguage = this._userPreferencesService.languagePreference
     }
     }
-    
-  
 
-  set language(myLanguage: string){
-    this._userPreferencesService.languagePreference = myLanguage;
+    set language(myLanguage: string){
+      this._userPreferencesService.languagePreference = myLanguage;
+    }
+
+  onClose() {
+    this.LanguageDialogRef.close();
   }
-
-  ngOnInit(): void {
-  }
-
-  openCategory() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "95%";
-    dialogConfig.height = "95%";
-    this.dialog.open(ListComponent, dialogConfig);
-  }
-
 }
