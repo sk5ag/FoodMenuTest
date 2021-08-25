@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
+import { CheckOutDeliveryComponent } from '../check-out-delivery/check-out-delivery.component';
+import { CheckOutRestaurantComponent } from '../check-out-restaurant/check-out-restaurant.component';
 import { CheckOutComponent } from '../check-out/check-out.component';
 
 interface Transaction {
@@ -29,7 +31,9 @@ export class CartComponent {
   constructor(
     public cartDialogRef: MatDialogRef<CartComponent>,
     private dialog: MatDialog,
-    public checkOutDialogRef: MatDialogRef<CheckOutComponent>
+    public checkOutDeliveryDialogRef: MatDialogRef<CheckOutDeliveryComponent>,
+    public checkOutRestaurantDialogRef: MatDialogRef<CheckOutRestaurantComponent>
+
   ){}
 
 
@@ -43,12 +47,21 @@ export class CartComponent {
   }
 
   onCheckOut(){
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "90%";
-    dialogConfig.height = "90%";    
-    this.dialog.open(CheckOutComponent, dialogConfig);
+    if (localStorage.getItem('myLocation') === 'IN'){
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.width = "90%";
+      dialogConfig.height = "auto";    
+      this.dialog.open(CheckOutRestaurantComponent, dialogConfig);
+    }else{
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.width = "90%";
+      dialogConfig.height = "auto";    
+      this.dialog.open(CheckOutDeliveryComponent, dialogConfig);
+    }
   }
 
 }

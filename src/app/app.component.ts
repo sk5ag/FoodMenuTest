@@ -11,6 +11,8 @@ import { CaptainViewTableComponent } from './order/captain/captain-view-table/ca
 import { ConfirmedOrdersComponent } from './order/confirmed-orders/confirmed-orders.component';
 import { ItemOrderComponent } from './order/item-order/item-order.component';
 import { UnConfirmedOrdersComponent } from './order/un-confirmed-orders/un-confirmed-orders.component';
+import { UserPreferencesService } from 'src/app/shared/user-preferences.service';
+
 
 @Component({
   selector: 'app-root',
@@ -22,13 +24,18 @@ export class AppComponent implements OnInit {
   gridColumns= 3;
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private _userPreferencesService: UserPreferencesService
 
   ){}
 
   ngOnInit(){
 
-    this.openLanguageScreen()
+    if (!localStorage.getItem('myLang') || !localStorage.getItem('myLocation')){
+      this.openLanguageScreen()
+    }else {
+      this._userPreferencesService.languagePreference = localStorage.getItem('myLang')
+    }
   }
   
   onCreateItem(){

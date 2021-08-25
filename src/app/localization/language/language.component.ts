@@ -43,4 +43,19 @@ export class LanguageComponent implements OnInit {
   onClose() {
     this.LanguageDialogRef.close();
   }
+
+  setLanguage(newLang)
+  {
+    localStorage.setItem('myLang', newLang);
+    this._userPreferencesService.languagePreference = newLang;
+
+  }
+
+  setLocation(newLocation)
+  {
+    localStorage.setItem('myLocation', newLocation);
+    this._userPreferencesService.locationPreference = newLocation;
+
+  }
+
 }

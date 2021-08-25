@@ -17,6 +17,9 @@ export class CheckOutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem('myLocation')){
+      console.log('Location not set yet!!')
+    }
   }
   onClose() {
     this.checkOutCollectionDialogRef.close();

@@ -1,23 +1,46 @@
-<mat-toolbar>
-    <span>SETTINGS</span>
-    <span class="fill-remaining-space"></span>
-    <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="1"><mat-icon>clear</mat-icon></button>
-</mat-toolbar>
-
 <br>
-
 <div style="text-align: center;">
     <button mat-button color="primary" [matMenuTriggerFor]="menu" aria-label="Example icon button with a home icon">
+        <div>
+            Select a language
+        </div>
         <mat-icon>language</mat-icon>
     </button>
     <mat-menu #menu="matMenu" class="menu_size">
-        <button mat-menu-item (click)='changeLanguage("English")'>English</button>
+        <!-- <button mat-menu-item (click)='changeLanguage("English")'>English</button>
         <button mat-menu-item (click)='changeLanguage("Kurdish")'>Kurdish</button>
-        <button mat-menu-item (click)='changeLanguage("Arabic")'>Arabic</button>
+        <button mat-menu-item (click)='changeLanguage("Arabic")'>Arabic</button> -->
+
+        <button mat-menu-item (click)='setLanguage("English")'>English</button>
+        <button mat-menu-item (click)='setLanguage("Kurdish")'>Kurdish</button>
+        <button mat-menu-item (click)='setLanguage("Arabic")'>Arabic</button>
     </mat-menu>
 </div>
+<br>
 <div style="text-align: center;">
-    <button mat-button style="margin: 20px 0 0 0;" color="primary">I'm in the restaurant</button>
-    <br>
-    <button mat-stroked-button style="margin: 20px 0 0 0;" color="primary">I want my order delivered to me</button>
+    <button mat-button color="primary" [matMenuTriggerFor]="location" aria-label="Example icon button with a home icon">
+        <div>
+            Where will you dine?
+        </div>
+        <mat-icon>
+            share_location
+        </mat-icon>
+    </button>
+    <mat-menu #location="matMenu" class="menu_size">
+        <!-- <button mat-menu-item (click)='changeLanguage("English")'>English</button>
+        <button mat-menu-item (click)='changeLanguage("Kurdish")'>Kurdish</button>
+        <button mat-menu-item (click)='changeLanguage("Arabic")'>Arabic</button> -->
+
+        <button mat-menu-item (click)='setLocation("IN")'>I'm in the restaurant</button>
+        <button mat-menu-item (click)='setLocation("OUT")'>I want my order delivered to me</button>
+    </mat-menu>
 </div>
+
+<div style="text-align: center;">
+    <button mat-stroked-button mat-dialog-close style="margin: 20px 0 0 0;" color="warn">Close</button>
+</div>
+<!-- <div style="text-align: center;">
+    <button mat-button style="margin: 20px 0 0 0;" color="primary" (click)="setLocation('IN')">I'm in the restaurant</button>
+    <br>
+    <button mat-stroked-button style="margin: 20px 0 0 0;" color="primary" (click)="setLocation('OUT')">I want my order delivered to me</button>
+</div> -->

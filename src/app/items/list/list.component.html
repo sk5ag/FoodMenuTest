@@ -1,17 +1,9 @@
 <mat-toolbar>
     <span>MENU ITEMS</span>
     <span class="fill-remaining-space"></span>
-    <div *ngIf="iniLanguage == 'English'; else showEnglish">
-        <button mat-icon-button (click)='changeLanguage("Kurdish")'><mat-icon>language</mat-icon> | KU</button>
+    <div>
         <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
     </div>
-    <ng-template #showEnglish>
-        <div>
-            <button mat-icon-button (click)='changeLanguage("English")'><mat-icon>language</mat-icon> | EN</button>
-            <button class="btn-dialog-close" (click)="onClose()" mat-stroked-button tabindex="-1"><mat-icon>clear</mat-icon></button>
-        </div>
-
-    </ng-template>
 </mat-toolbar>
 <br>
 <div class="content">

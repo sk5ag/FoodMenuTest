@@ -39,6 +39,8 @@ import { CaptainViewTableComponent } from './order/captain/captain-view-table/ca
 import { CaptainCloseTableComponent } from './order/captain/captain-close-table/captain-close-table.component';
 import { LanguageComponent } from './localization/language/language.component';
 import { LocationComponent } from './localization/location/location.component';
+import { CheckOutDeliveryComponent } from './items/check-out-delivery/check-out-delivery.component';
+import { CheckOutRestaurantComponent } from './items/check-out-restaurant/check-out-restaurant.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { LocationComponent } from './localization/location/location.component';
     CaptainViewTableComponent,
     CaptainCloseTableComponent,
     LanguageComponent,
-    LocationComponent
+    LocationComponent,
+    CheckOutDeliveryComponent,
+    CheckOutRestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +102,9 @@ import { LocationComponent } from './localization/location/location.component';
     FavSnakbarComponent,
     UnconfirmedOrderItemsComponent,
     LanguageComponent,
-    LocationComponent
+    LocationComponent,
+    CheckOutDeliveryComponent,
+    CheckOutRestaurantComponent
   ]
 })
 export class AppModule { }

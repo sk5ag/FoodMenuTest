@@ -9,4 +9,5 @@ export class UserPreferencesService {
     console.log('New Instance Created!!')
   }
   languagePreference: string = 'English';
+  locationPreference: string = ''; 
   }
